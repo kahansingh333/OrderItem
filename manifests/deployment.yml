@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kahansinghtruyumwebapiorderitem 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kahansinghtruyumwebapiorderitem
+  template:
+    metadata:
+      labels:
+        app: kahansinghtruyumwebapiorderitem 
+    spec:
+      containers:
+        - name: kahansinghtruyumwebapiorderitem 
+          image: dnazurecontainer2149365.azurecr.io/kahansinghtruyumwebapiorderitem
+          ports:
+          - containerPort: 80
